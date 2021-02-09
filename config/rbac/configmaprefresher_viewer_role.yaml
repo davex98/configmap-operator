@@ -1,0 +1,20 @@
+# permissions for end users to view configmaprefreshers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: configmaprefresher-viewer-role
+rules:
+- apiGroups:
+  - refresher.burghardt.tech
+  resources:
+  - configmaprefreshers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - refresher.burghardt.tech
+  resources:
+  - configmaprefreshers/status
+  verbs:
+  - get

@@ -1,0 +1,24 @@
+# permissions for end users to edit configmaprefreshers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: configmaprefresher-editor-role
+rules:
+- apiGroups:
+  - refresher.burghardt.tech
+  resources:
+  - configmaprefreshers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - refresher.burghardt.tech
+  resources:
+  - configmaprefreshers/status
+  verbs:
+  - get

@@ -1,0 +1,12 @@
+domain: burghardt.tech
+layout: go.kubebuilder.io/v2
+projectName: configmap-operator
+repo: github.com/davex98/configmap-operator
+resources:
+- group: refresher
+  kind: ConfigMapRefresher
+  version: v1alpha1
+version: 3-alpha
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}

@@ -1,0 +1,8 @@
+apiVersion: refresher.burghardt.tech/v1alpha1
+kind: ConfigMapRefresher
+metadata:
+  name: mapa
+spec:
+  configMap: "mapa"
+  podSelector:
+    appname: none
